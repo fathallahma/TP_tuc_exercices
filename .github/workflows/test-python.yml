@@ -22,7 +22,9 @@ jobs:
           python -m pip install -r requirements.txt
       - name: pylint 
         run: pylint --exit-zero application/
-          
+      - name: Run tests with coverage
+        run: pytest --cov=my_package tests/
+      
   
   
 

@@ -23,7 +23,7 @@ jobs:
       - name: pylint 
         run: pylint --exit-zero application/
       - name: Run tests with coverage
-        run: pytest tests/
+        run: pytest --cov=TP_tuc_exercices tests/
       
   
   

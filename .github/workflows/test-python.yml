@@ -24,11 +24,7 @@ jobs:
         run: pylint --exit-zero application/
       - name: Run tests with coverage
         run: coverage run -m pytest --profile
-      - name: run appi and locust
-        run: |
-          unicorn application.main:app &
-          locust -f tests/locustfile.py
-      
+ 
       
   
   

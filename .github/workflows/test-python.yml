@@ -20,5 +20,9 @@ jobs:
       - name: Install requirements
         run: |
           python -m pip install -r requirements.txt
+      - name: pylint 
+        run: pylint --exit-zero application/
+          
+  
   
 

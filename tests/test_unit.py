@@ -4,12 +4,15 @@ import pytest
 from application.main import app
 from random import randint
 client = TestClient(app)
-
+from application.main2 import return_title
 
 def test_home():
     response = client.get("/")
     assert response.status_code == 200
     assert response.json() == "Hello World"
+    
+def test_get_title():
+    assert return_title() == "Hezz2: Jeu de cartes marocain"
 
 
 list_of_numbers = [randint(1, 10) for i in range(0, 10)]
